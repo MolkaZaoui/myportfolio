@@ -92,28 +92,11 @@ export function Contact() {
 
 <AnimatedSection delay={0.2}>
   <form
-    className="flex flex-col gap-4 rounded-xl border border-border bg-card p-6"
-    onSubmit={(e) => {
-      e.preventDefault()
-      const form = e.currentTarget as HTMLFormElement
+   
+  action="https://formspree.io/f/xgonkoro"
+  method="POST"
+  className="flex flex-col gap-4 rounded-xl border border-border bg-card p-6"
 
-      emailjs.sendForm(
-        'service_rbj0rvy',  
-        'template_m495jbh',  
-        form,
-        'BXv9iwKUnnUqKVDVp'    
-      )
-      .then(
-        () => {
-          alert('Message envoyé avec succès ! ✨')
-          form.reset()
-        },
-        (error: any) => {
-          alert('Erreur lors de l’envoi. Réessayez plus tard.')
-          console.error(error)
-        }
-      )
-    }}
   >
     <h3 className="mb-2 font-mono text-xs font-semibold tracking-widest text-primary uppercase">
       Send a Message
