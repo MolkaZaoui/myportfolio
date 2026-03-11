@@ -2,7 +2,6 @@
 
 import { AnimatedSection } from "./animated-section"
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react"
-import emailjs from '@emailjs/browser'
 
 export function Contact() {
   return (
